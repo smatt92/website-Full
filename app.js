@@ -21,11 +21,11 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
-app.use(session({
-  secret: "Secret Key",
-  resave: false,
-  saveUninitialized: false
-}));
+// app.use(session({
+//   secret: "Secret Key",
+//   resave: false,
+//   saveUninitialized: false
+// }));
 
 //app.use(passport.initialize());
 //app.use(passport.session());
