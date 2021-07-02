@@ -82,15 +82,20 @@ app.use(bodyParser.urlencoded({
 
 
 // LANDING
-app.get("/", (req, res) => {
-  // Event.find({}, (err, events) => {
-  //   if(!err) {
-    {
-      res.render("/views");
-    }
-  });
-    
- 
+// app.get("/", (req, res) => {
+//       Event.find({}, (err, events) => {
+//           if (!err) {
+//             {
+//               res.render("/views");
+//             }
+//           });
+//       });
+
+app.get("/", function (req, res) {
+  res.render('portofolio.ejs');
+});
+
+
 
 // //ADMIN
 // app.get("/admin", (req, res) => {
@@ -211,6 +216,6 @@ app.get("/", (req, res) => {
 // <----------------------------------------------------------------------->
 
 
-app.listen(process.env.PORT || 3001, function() {
-  console.log("Client Portfolio\nServer started on port 3001");
+app.listen(process.env.PORT || 3000, function () {
+  console.log("Client Portfolio\nServer started on port 3000");
 });
