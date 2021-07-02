@@ -2,11 +2,11 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 //const mongoose = require("mongoose");
-const session = require('express-session');
-//const passport = require("passport");
+//const session = require('express-session');
+const passport = require("passport");
 //const passportLocalMongoose = require("passport-local-mongoose");
 //const findOrCreate = require('mongoose-findorcreate');
-const methodOverride = require('method-override');
+//const methodOverride = require('method-override');
 //git commit -m "Deploy"const Schema = mongoose.Schema;
 const app = express();
 
@@ -27,8 +27,8 @@ app.use(session({
   saveUninitialized: false
 }));
 
-app.use(passport.initialize());
-app.use(passport.session());
+//app.use(passport.initialize());
+//app.use(passport.session());
 // mongoose.connect("mongodb://localhost/havefun", {useNewUrlParser: true, useUnifiedTopology: true});
 // mongoose.set("useCreateIndex", true);
 // mongoose.set('useFindAndModify', false);
@@ -37,21 +37,21 @@ app.use(passport.session());
 
 
 // SCHEMAS
-const userSchema = new Schema({
-  username: String,
-  password: String,
-  name: String,
-});
-userSchema.plugin(passportLocalMongoose);
-userSchema.plugin(findOrCreate);
+// const userSchema = new Schema({
+//   username: String,
+//   password: String,
+//   name: String,
+// });
+// userSchema.plugin(passportLocalMongoose);
+// userSchema.plugin(findOrCreate);
 
-const eventSchema = new Schema({
-  eventName: String, 
-  eventDescription: String,
-  eventDate: String,
-  eventMonth: String,
-  url: String
-});
+// const eventSchema = new Schema({
+//   eventName: String, 
+//   eventDescription: String,
+//   eventDate: String,
+//   eventMonth: String,
+//   url: String
+// });
 
 
 // <----------------------------------------------------------->
@@ -64,16 +64,16 @@ const eventSchema = new Schema({
 // <----------------------------------------------------------->
 
 
-passport.use('local.one', User.createStrategy());
+// passport.use('local.one', User.createStrategy());
 
-passport.serializeUser(function(user, done) {
-  done(null, user.id);
-});
-passport.deserializeUser(function(id, done) {
-  User.findById(id, function(err, user) {
-    done(err, user);
-  });
-});
+// passport.serializeUser(function(user, done) {
+//   done(null, user.id);
+// });
+// passport.deserializeUser(function(id, done) {
+//   User.findById(id, function(err, user) {
+//     done(err, user);
+//   });
+// });
 
 
 // <----------------------------------------------------------->
@@ -212,5 +212,5 @@ app.get("/", (req, res) => {
 
 
 app.listen(process.env.PORT || 3001, function() {
-  console.log("Client Portfolio\nServer started on port 3000");
+  console.log("Client Portfolio\nServer started on port 3001");
 });
