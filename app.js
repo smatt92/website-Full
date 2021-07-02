@@ -86,7 +86,7 @@ app.get("/", (req, res) => {
   // Event.find({}, (err, events) => {
   //   if(!err) {
     {
-      res.render("/views",{events:events});
+      res.render("/views");
     }
   });
     
