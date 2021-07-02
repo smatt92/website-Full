@@ -16,7 +16,7 @@ const path = require('path');
 
 
 app.use(express.static("public"));
-app.set('view engine', 'vash');
+app.set('view engine', 'ejs');
 app.use(methodOverride('_method'));
 app.use(bodyParser.urlencoded({
   extended: true
@@ -83,16 +83,16 @@ app.use(bodyParser.urlencoded({
 
 
 // LANDING
-// app.get("/", (req, res) => {
-//   Event.find({}, (err, events) => {
-//     if(!err) {
-//       res.render("portfolio.ejs",{events:events});
-//     }
-//   });
-//   })
+app.get("/", (req, res) => {
+  Event.find({}, (err, events) => {
+    if(!err) {
+      res.render("portfolio",{events:events});
+    }
+  });
+  })
 
 // app.set('view engine', 'vash');
-app.set('views', path.join( __dirname, '/views') );
+// app.set('views', path.join( __dirname, '/views') );
 
 // //ADMIN
 // app.get("/admin", (req, res) => {
