@@ -16,6 +16,7 @@ const path = require('path');
 
 
 app.use(express.static("public"));
+app.set('views', path.join( __dirname, '/views') );
 app.set('view engine', 'ejs');
 app.use(methodOverride('_method'));
 app.use(bodyParser.urlencoded({
@@ -92,7 +93,7 @@ app.get("/", (req, res) => {
   })
 
 // app.set('view engine', 'vash');
-// app.set('views', path.join( __dirname, '/views') );
+
 
 // //ADMIN
 // app.get("/admin", (req, res) => {
