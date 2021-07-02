@@ -83,12 +83,12 @@ app.use(bodyParser.urlencoded({
 
 // LANDING
 app.get("/", (req, res) => {
-  Event.find({}, (err, events) => {
-    if(!err) {
+  // Event.find({}, (err, events) => {
+  //   if(!err) {
+    {
       res.render("portfolio.ejs",{events:events});
     }
   });
-  })
     
  
 
