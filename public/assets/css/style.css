@@ -69,7 +69,7 @@ h6 {
   z-index: 9997;
   transition: all 0.5s;
   padding: 0 15px;
-  background: #6713C8;
+  background: #4d5898;
   overflow-y: auto;
 }
 
@@ -154,12 +154,20 @@ h6 {
 .nav-menu a:focus {
   display: flex;
   align-items: center;
-  color: #a8a9b4;
+  color: #fff;
   padding: 12px 15px;
   margin-bottom: 4px;
   transition: 0.3s;
   font-size: 15px;
   font-weight: 800;
+}
+
+.fnt18{
+  font-size: 18px !important;
+}
+
+.fnt16{
+  font-size: 16px !important;
 }
 
 #myBt{
@@ -178,7 +186,7 @@ h6 {
 .nav-menu a:focus i {
   font-size: 24px;
   padding-right: 8px;
-  color: #6f7180;
+  color: #fff;
 }
 
 .nav-menu a:hover,
@@ -206,7 +214,7 @@ h6 {
   font-size: 24px;
   transition: all 0.4s;
   outline: none !important;
-  background-color: #6713C8;
+  background-color: #4d5898;
   color: #fff;
   width: 40px;
   height: 40px;
@@ -256,9 +264,13 @@ h6 {
 
 #hero h1 {
   margin: 0 0 10px 0;
-  font-size: 64px;
+  font-size: 45px;
   font-weight: 700;
   line-height: 56px;
+  color: #fff;
+}
+
+.whitecol{
   color: #fff;
 }
 
@@ -445,7 +457,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Akills
+# Skills
 --------------------------------------------------------------*/
 .skills .progress {
   height: 60px;
@@ -454,11 +466,16 @@ section {
   border-radius: 0;
 }
 
+.br-rad{
+  border-radius: 15px;
+}
+
 .skills .progress .skill {
   padding: 0;
   margin: 0 0 6px 0;
   text-transform: uppercase;
   display: block;
+  font-size: 14px;
   font-weight: 600;
   font-family: "Quicksand", sans-serif;
   color: #050d18;
@@ -516,7 +533,7 @@ section {
   justify-content: center;
 }
 .resume .resume-item h5 {
-  font-size: 16px;
+  font-size: 18px;
   background: #e4edf9;
   padding: 5px 15px;
   display: inline-block;
